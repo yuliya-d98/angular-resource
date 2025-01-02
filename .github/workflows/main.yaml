@@ -26,7 +26,7 @@ jobs:
 
       # Собираем проект (для статических сайтов, например, React/Vue/Svelte)
       - name: Build project
-        run: npm run build --base-href=/angular-resource/
+        run: npm run build --base-href /angular-resource/
 
       # Публикуем на GitHub Pages
       - name: Deploy to GitHub Pages
