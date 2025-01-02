@@ -1,23 +1,34 @@
-name: Build and Deploy Script
+name: Deploy to GitHub Pages
+
 on:
   push:
     branches:
-      - master
+      - master  # Триггер при пуше в ветку master
+
 jobs:
-  build:
+  deploy:
     runs-on: ubuntu-latest
+
     steps:
-      - name: Checkout Repository
-        uses: actions/checkout@v2
-      - name: Adding Node.js
-        uses: actions/setup-node@v2
+      # Проверяем код из репозитория
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Устанавливаем Node.js (если проект основан на npm)
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
         with:
-          node-version: 20
-      - name: Install Dependencies
+          node-version: 16
+
+      # Устанавливаем зависимости
+      - name: Install dependencies
         run: npm install
-      - name: Build Angular App
+
+      # Собираем проект (для статических сайтов, например, React/Vue/Svelte)
+      - name: Build project
         run: npm run build
-        # Публикуем на GitHub Pages
+
+      # Публикуем на GitHub Pages
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:

@@ -1,20 +1,14 @@
-# AngularResource
+# Angular Resource
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
 
-## Development server
+## Angular Resource video
 
-To start a local development server, run:
+[Angular Resource API - Everything You Have To Know (so far)](https://www.youtube.com/watch?v=W7-lsoL-Gi8)
 
-```bash
-ng serve
-```
+## Deploy Angular app to Github pages
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
-
-## Code scaffolding
-
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+[Automate Deployment of Angular App to GitHub Pages using GitHub Actions](https://medium.com/@alexanderkalarickal/automate-deployment-of-angular-app-to-github-pages-using-github-actions-fe147c58d6a3)
 
 ```bash
 ng generate component component-name
