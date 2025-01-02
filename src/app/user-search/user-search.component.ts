@@ -66,3 +66,4 @@ export class UserSearchComponent {
     this.users.update((users) => users ? [user, ...users] : [user])
   }
 }
+
